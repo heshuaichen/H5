@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #color{
+        color:red;
+    }
+    #submit1{
+        width:550px;
+        height:30px;
+        text-align:center;
+        background-color:#dddddd;
+    }
+</style>
+<body>
+    <h1>学生信息</h1>
+    <br/>
+    <form action="#" method="get"> 
+        <fieldset style="width:600px">
+            <legend id="color">学生档案</legend>
+            <p>姓名：</p>
+            <input type="text" name="name1" placeholder="请输入姓名" required style="height:30px;width:550px;">*
+            <p>学号:</p>
+            <input type="text" name="xuehao" placeholder="请输入学号" required style="height:30px;width:550px;">*
+            <p>手机号码：</p>
+            <input type="tel" name="shoujihao" placeholder="请输入手机号" required style="height:30px;width:550px;">*
+            <p>邮箱地址：</p>
+            <input type="email" name="youxiang" placeholder="请输入邮箱地址" required style="height:30px;width:550px;">*
+            <p>录取学校:</p>
+            <input type="search" name="search1" autocomplete="on" list="xuexiao" style="height:30px;width:550px;">
+            <datalist id="xuexiao">
+                <option>河北师大</option>
+                <option>天津师大</option>
+                <option>北京师大</option>
+                <option>北京大学</option>
+                <option>天津大学</option>
+            </datalist>
+            <p>入学成绩：</p>
+            <input type="number" name="number1" min="0" max="750" step="1" style="height:30px;width:550px;">
+            <p>入学时间：</p>
+            <input type="date" name="date1" style="height:30px;width:550px;">
+            <br>
+            <br>
+            <input id="submit1" type="submit" name="sub" value="提交">
+        </fieldset>
+    </form>
+</body>
+</html>
