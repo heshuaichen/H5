@@ -15,6 +15,9 @@
         text-align:center;
         background-color:#dddddd;
     }
+    span{
+        color:red;
+    }
 </style>
 <body>
     <h1>学生信息</h1>
@@ -23,13 +26,13 @@
         <fieldset style="width:600px">
             <legend id="color">学生档案</legend>
             <p>姓名：</p>
-            <input type="text" name="name1" placeholder="请输入姓名" required style="height:30px;width:550px;">*
+            <input type="text" name="name1" placeholder="请输入姓名" required style="height:30px;width:550px;"><span>*</span>
             <p>学号:</p>
-            <input type="text" name="xuehao" placeholder="请输入学号" required style="height:30px;width:550px;">*
+            <input type="text" name="xuehao" placeholder="请输入学号" required style="height:30px;width:550px;"><span>*</span>
             <p>手机号码：</p>
-            <input type="tel" name="shoujihao" placeholder="请输入手机号" required style="height:30px;width:550px;">*
+            <input type="tel" name="shoujihao" placeholder="请输入手机号" required style="height:30px;width:550px;"><span>*</span>
             <p>邮箱地址：</p>
-            <input type="email" name="youxiang" placeholder="请输入邮箱地址" required style="height:30px;width:550px;">*
+            <input type="email" name="youxiang" placeholder="请输入邮箱地址" required style="height:30px;width:550px;"><span>*</span>
             <p>录取学校:</p>
             <input type="search" name="search1" autocomplete="on" list="xuexiao" style="height:30px;width:550px;">
             <datalist id="xuexiao">
