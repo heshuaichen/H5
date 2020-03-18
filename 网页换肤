@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul,li{
+            list-style: none;
+        }
+        #box{
+            width:650px;
+            margin-left:400px;
+            margin-top:200px;
+        }
+        #box1{
+            color: red;
+            font-size:25px;
+        }
+        #color{
+            width:600px;
+            height:50px;
+            border:black 1px solid;
+        }
+        #color li{
+            display: inline-block;
+            width:20px;
+            height:20px;
+            margin-right:5px;
+            margin-top:15px;
+        }
+        #c1{
+            top:-10px;
+            position: relative;
+        }
+        .color1{
+            background-color: grey;
+        }
+        .color2{
+            background-color:purple;
+        }
+        .color3{
+            background-color:red;
+        }
+        .color4{
+            background-color:#5dc8ec;
+        }
+        .color5{
+            background-color:orange;
+        }
+        .color6{
+            background-color:#11de3e;
+        }
+        #div1{
+            width:570px;
+            height:60px;
+            margin-left:30px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+        <fieldset id="box">
+            <legend id="box1">
+                网页换肤
+            </legend>
+            <ul id="color">
+                <li class="color1" id="c1" title="灰色"></li>
+                <li class="color2" id="c2" title="紫色"></li>
+                <li class="color3" id="c3" title="红色"></li>
+                <li class="color4" id="c4" title="天蓝色"></li>
+                <li class="color5" id="c5" title="橙色"></li>
+                <li class="color6" id="c6" title="淡绿色"></li>
+            </ul>
+            <div id="div1" class="color1">
+                LocalStorage将数据保存在客户端本地的硬件设备中，即便浏览器被关闭了，数据仍然存在，下次打开浏览器访问网站仍然可以继续使用。
+            </div>
+        </fieldset>
+    </form>
+</body>
+<script>
+    var div1 = document.getElementById('div1');
+    var c1 = document.getElementById('c1');
+    var c2 = document.getElementById('c2');
+    var c3 = document.getElementById('c3');
+    var c4 = document.getElementById('c4');
+    var c5 = document.getElementById('c5');
+    var c6 = document.getElementById('c6');
+    c1.onclick = function(){
+        var value = "grey";
+        div1.style.backgroundColor = value;
+        window.localStorage.setItem("DivColor",value);
+        document.getElementsByTagName("li")[1].removeAttribute("id"); 
+        document.getElementsByTagName("li")[2].removeAttribute("id");
+        document.getElementsByTagName("li")[3].removeAttribute("id");
+        document.getElementsByTagName("li")[4].removeAttribute("id");
+        document.getElementsByTagName("li")[5].removeAttribute("id");
+        document.getElementsByTagName("li")[0].setAttribute("id","c1");
+    }
+    c2.onclick = function(){
+        var value = "purple";
+        div1.style.backgroundColor = value;
+        window.localStorage.setItem("DivColor",value);
+        document.getElementsByTagName("li")[0].removeAttribute("id"); 
+        document.getElementsByTagName("li")[2].removeAttribute("id");
+        document.getElementsByTagName("li")[3].removeAttribute("id");
+        document.getElementsByTagName("li")[4].removeAttribute("id");
+        document.getElementsByTagName("li")[5].removeAttribute("id");
+        document.getElementsByTagName("li")[1].setAttribute("id","c1");
+    }
+    c3.onclick = function(){
+        var value = "red";
+        div1.style.backgroundColor = value;
+        window.localStorage.setItem("DivColor",value);
+        document.getElementsByTagName("li")[0].removeAttribute("id"); 
+        document.getElementsByTagName("li")[1].removeAttribute("id");
+        document.getElementsByTagName("li")[3].removeAttribute("id");
+        document.getElementsByTagName("li")[4].removeAttribute("id");
+        document.getElementsByTagName("li")[5].removeAttribute("id");
+        document.getElementsByTagName("li")[2].setAttribute("id","c1");
+    }
+    c4.onclick = function(){
+        var value = "#5dc8ec";
+        div1.style.backgroundColor = value;
+        window.localStorage.setItem("DivColor",value);
+        document.getElementsByTagName("li")[0].removeAttribute("id"); 
+        document.getElementsByTagName("li")[1].removeAttribute("id");
+        document.getElementsByTagName("li")[2].removeAttribute("id");
+        document.getElementsByTagName("li")[4].removeAttribute("id");
+        document.getElementsByTagName("li")[5].removeAttribute("id");
+        document.getElementsByTagName("li")[3].setAttribute("id","c1");
+    }
+    c5.onclick = function(){
+        var value = "orange";
+        div1.style.backgroundColor = value;
+        window.localStorage.setItem("DivColor",value);
+        document.getElementsByTagName("li")[0].removeAttribute("id"); 
+        document.getElementsByTagName("li")[1].removeAttribute("id");
+        document.getElementsByTagName("li")[2].removeAttribute("id");
+        document.getElementsByTagName("li")[3].removeAttribute("id");
+        document.getElementsByTagName("li")[5].removeAttribute("id");
+        document.getElementsByTagName("li")[4].setAttribute("id","c1");
+    }
+    c6.onclick = function(){
+        var value = "#11de3e";
+        div1.style.backgroundColor = value;
+        window.localStorage.setItem("DivColor",value);
+        document.getElementsByTagName("li")[0].removeAttribute("id"); 
+        document.getElementsByTagName("li")[1].removeAttribute("id");
+        document.getElementsByTagName("li")[2].removeAttribute("id");
+        document.getElementsByTagName("li")[3].removeAttribute("id");
+        document.getElementsByTagName("li")[4].removeAttribute("id");
+        document.getElementsByTagName("li")[5].setAttribute("id","c1");
+    }
+    window.onload = function(){
+        div1.style.backgroundColor = window.localStorage.getItem("DivColor");
+    }
+</script>
+</html>
