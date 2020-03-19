@@ -154,6 +154,60 @@
     }
     window.onload = function(){
         div1.style.backgroundColor = window.localStorage.getItem("DivColor");
+        if(localStorage.getItem("DivColor") == "grey" )
+        {
+            document.getElementsByTagName("li")[1].removeAttribute("id"); 
+            document.getElementsByTagName("li")[2].removeAttribute("id");
+            document.getElementsByTagName("li")[3].removeAttribute("id");
+            document.getElementsByTagName("li")[4].removeAttribute("id");
+            document.getElementsByTagName("li")[5].removeAttribute("id");
+            document.getElementsByTagName("li")[0].setAttribute("id","c1");
+        }
+        else if(localStorage.getItem("DivColor") == "purple")
+        {
+            document.getElementsByTagName("li")[0].removeAttribute("id"); 
+            document.getElementsByTagName("li")[2].removeAttribute("id");
+            document.getElementsByTagName("li")[3].removeAttribute("id");
+            document.getElementsByTagName("li")[4].removeAttribute("id");
+            document.getElementsByTagName("li")[5].removeAttribute("id");
+            document.getElementsByTagName("li")[1].setAttribute("id","c1");
+        }
+        else if(localStorage.getItem("DivColor") == "red")
+        {
+            document.getElementsByTagName("li")[0].removeAttribute("id"); 
+            document.getElementsByTagName("li")[1].removeAttribute("id");
+            document.getElementsByTagName("li")[3].removeAttribute("id");
+            document.getElementsByTagName("li")[4].removeAttribute("id");
+            document.getElementsByTagName("li")[5].removeAttribute("id");
+            document.getElementsByTagName("li")[2].setAttribute("id","c1");
+        }
+        else if(localStorage.getItem("DivColor") == "#5dc8ec")
+        {
+            document.getElementsByTagName("li")[0].removeAttribute("id"); 
+            document.getElementsByTagName("li")[1].removeAttribute("id");
+            document.getElementsByTagName("li")[2].removeAttribute("id");
+            document.getElementsByTagName("li")[4].removeAttribute("id");
+            document.getElementsByTagName("li")[5].removeAttribute("id");
+            document.getElementsByTagName("li")[3].setAttribute("id","c1");
+        }
+        else if(localStorage.getItem("DivColor") == "orange")
+        {
+            document.getElementsByTagName("li")[0].removeAttribute("id"); 
+            document.getElementsByTagName("li")[1].removeAttribute("id");
+            document.getElementsByTagName("li")[2].removeAttribute("id");
+            document.getElementsByTagName("li")[3].removeAttribute("id");
+            document.getElementsByTagName("li")[5].removeAttribute("id");
+            document.getElementsByTagName("li")[4].setAttribute("id","c1");
+        }
+        else if(localStorage.getItem("DivColor") == "#11de3e")
+        {
+            document.getElementsByTagName("li")[0].removeAttribute("id"); 
+            document.getElementsByTagName("li")[1].removeAttribute("id");
+            document.getElementsByTagName("li")[2].removeAttribute("id");
+            document.getElementsByTagName("li")[3].removeAttribute("id");
+            document.getElementsByTagName("li")[4].removeAttribute("id");
+            document.getElementsByTagName("li")[5].setAttribute("id","c1");
+        }
     }
 </script>
 </html>
