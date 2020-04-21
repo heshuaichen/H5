@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #canvas {
+        border: 2px solid blue;
+        position: absolute;
+        left: 500px;
+    }
+    span {
+        position: absolute;
+        color: red;
+        font-size: 30px;
+        line-height: 100px;
+        left: 545px;
+    }
+</style>
+
+<body>
+    <span id="text"></span>
+    <canvas id="canvas" width="200px" height="100px"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    var box2 = document.getElementById("box2");
+    var text = document.getElementById("text");
+    var arr = ["一等奖", "二等奖", "三等奖", "谢谢惠顾"];
+    var index = parseInt(Math.random() * arr.length);
+    text.innerHTML = arr[index];
+    console.log(index);
+    context.beginPath();
+    context.globalCompositeOperation = "source-over";
+    context.fillStyle = "gray";
+    context.fillRect(0, 0, 210, 110);
+    context.closePath();
+    context.globalCompositeOperation = "destination-out";
+    context.beginPath();
+    canvas.onmousedown = function (e) {
+        document.onmousemove = function (e) {
+            var e = e || window.event;
+            var x = e.clientX - canvas.offsetLeft;
+            var y = e.clientY - canvas.offsetTop;
+            // context.globalCompositeOperation = "destination-out";
+            context.moveTo(x, y);
+            context.arc(x, y, 10, 0, 2 * Math.PI, false);
+            context.fill();
+            var mydata = context.getImageData(0, 0, canvas.width, canvas.height);
+            var data = mydata.data;
+            var count = 0;
+            for (var i = 0; i < data.length; i += 4) {
+                var a = data[i + 3];
+                if (a == 0) {
+                    count++;
+                }
+                if (count >= data.length / 4 * 0.6) {
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                }
+            }
+        }
+    }
+</script>
+
+</html>
