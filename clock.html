@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+
+    function timer(){
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        //清除画布
+        context.clearRect(0,0,500,500);
+
+        //绘制表盘
+        context.beginPath();
+        context.lineWidth = 10;
+        context.strokeStyle = "greenyellow";
+        context.arc(250,250,200,0,2*Math.PI);
+        context.stroke();
+        context.closePath();
+
+        //分针的刻度
+        for(var i = 0;i < 60;i++){
+            context.save();
+            context.beginPath();
+            context.translate(250,250);//将原点平移表盘的中心位置
+            context.rotate(i*6*Math.PI/180);
+            context.strokeStyle = "#000";
+            context.lineWidth = 4;
+            context.moveTo(0,170);
+            context.lineTo(0,185);
+            context.stroke();
+            context.closePath();
+            context.restore();
+        }
+        //时针的刻度
+        for(var i = 0;i < 12;i++){
+            context.save();
+            context.beginPath();
+            context.translate(250,250);//将原点平移表盘的中心位置
+            context.rotate(i*30*Math.PI/180);
+            context.strokeStyle = "#f00";
+            context.lineWidth = 4;
+            context.moveTo(0,160);
+            context.lineTo(0,185);
+            context.stroke();
+            context.closePath();
+            context.restore();
+        }
+
+        //写刻度值
+        for(var i =12;i > 0;i--){
+            context.save();
+            context.beginPath();
+            context.translate(250,250);
+            context.font = "20px 宋体";
+            var x = 140*(Math.cos(30*(15-i)/180*Math.PI))-5;//利用cos,sin计算x,y
+            var y = 140*(-Math.sin(30*(15-i)/180*Math.PI))+5;
+            context.fillText(i,x,y);
+            context.closePath();
+            context.restore();
+        }
+        //时针
+        context.save();
+        context.translate(250,250);
+        context.rotate(h*30*Math.PI/180+2*Math.PI/60*m/12);
+        context.beginPath();
+        context.moveTo(0,-120);
+        context.lineTo(0,12);
+        context.lineWidth = 8;
+        context.strokeStyle = "purple";
+        context.stroke();
+        context.closePath();
+        context.restore();
+        //分针
+        context.save();
+        context.translate(250,250);
+        context.rotate(m*6*Math.PI/180+2*Math.PI/60*s/60);
+        context.beginPath();
+        context.moveTo(0,-160);
+        context.lineTo(0,20);
+        context.lineWidth = 6;
+        context.strokeStyle = "pink";
+        // context.stroke();
+        context.closePath();
+        context.stroke();
+        context.restore();
+        //秒针
+        context.save();
+        context.translate(250,250);
+        context.rotate(s*6*Math.PI/180);
+        context.beginPath();
+        context.moveTo(0,-185);
+        context.lineTo(0,25);
+        context.lineWidth = 4;
+        context.strokeStyle = "red";
+        context.stroke();
+        context.closePath();
+        context.restore();
+        //绘制时针，分针，秒针的交叉点
+        context.beginPath();
+        context.arc(250,250,8,0,2*Math.PI,false);
+        context.lineWidth = 5;
+        context.strokeStyle = "red";
+        context.fillStyle="black";
+        context.fill();
+        context.stroke();
+        context.closePath();
+        //秒针前段的小圆点
+        context.save();
+        context.translate(250,250);
+        context.rotate(s*6*Math.PI/180);
+        context.beginPath();
+        context.arc(0,-150,8,0,2*Math.PI,false);
+        context.lineWidth = 4;
+        context.strokeStyle = "red";
+        context.fillStyle="black";
+        context.fill();
+        // context.stroke();
+        context.closePath();
+        context.stroke();
+        context.restore();
+    }
+    timer();
+    setInterval(timer,1000);
+</script>
+</html>
