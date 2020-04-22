@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>抽奖</title>
 </head>
 <style>
     #canvas {
@@ -12,6 +12,7 @@
         position: absolute;
         left: 500px;
     }
+
     span {
         position: absolute;
         color: red;
@@ -40,28 +41,38 @@
     context.fillRect(0, 0, 210, 110);
     context.closePath();
     context.globalCompositeOperation = "destination-out";
-    context.beginPath();
+    var isMousdown = false;
     canvas.onmousedown = function (e) {
-        document.onmousemove = function (e) {
+        isMousdown = true;
+        var e = e || window.event;
+        var x = e.clientX - canvas.offsetLeft;
+        var y = e.clientY - canvas.offsetTop;
+        context.moveTo(x, y);
+        context.arc(x, y, 10, 0, 2 * Math.PI, false);
+        context.fill();
+        canvas.onmousemove = function (e) {
+            if (!isMousdown)
+                return false;
             var e = e || window.event;
             var x = e.clientX - canvas.offsetLeft;
             var y = e.clientY - canvas.offsetTop;
-            // context.globalCompositeOperation = "destination-out";
             context.moveTo(x, y);
             context.arc(x, y, 10, 0, 2 * Math.PI, false);
             context.fill();
-            var mydata = context.getImageData(0, 0, canvas.width, canvas.height);
-            var data = mydata.data;
+            var image = context.getImageData(0, 0, canvas.width, canvas.height);
             var count = 0;
-            for (var i = 0; i < data.length; i += 4) {
-                var a = data[i + 3];
-                if (a == 0) {
+            for (var i = 0; i < image.data.length; i += 4) {
+                var a = image.data[i + 3];
+                if (a == 0) {//a代表rgba的透明度，当出现透明时count++
                     count++;
                 }
-                if (count >= data.length / 4 * 0.6) {
+                if (count >= image.data.length / 4 * 0.6) {
                     context.clearRect(0, 0, canvas.width, canvas.height);
                 }
             }
+        }
+        canvas.onmouseup = function (e) {
+            isMousdown = false;
         }
     }
 </script>
