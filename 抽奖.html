@@ -27,7 +27,6 @@
     <canvas id="canvas" width="200px" height="100px"></canvas>
 </body>
 <script>
-    console.log(canvas.offsetLeft);
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext("2d");
     var box2 = document.getElementById("box2");
@@ -65,7 +64,6 @@
             context.moveTo(x, y);
             context.arc(x, y, 10, 0, 2 * Math.PI, false);
             context.fill();
-            console.log(canvas.offsetLeft);
             var image = context.getImageData(0, 0, canvas.width, canvas.height);
             var count = 0;
             for (var i = 0; i < image.data.length; i += 4) {
