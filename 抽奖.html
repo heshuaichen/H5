@@ -27,6 +27,7 @@
     <canvas id="canvas" width="200px" height="100px"></canvas>
 </body>
 <script>
+    console.log(canvas.offsetLeft);
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext("2d");
     var box2 = document.getElementById("box2");
@@ -42,11 +43,16 @@
     context.closePath();
     context.globalCompositeOperation = "destination-out";
     var isMousdown = false;
+    //利用onmousedown和onmouseup
     canvas.onmousedown = function (e) {
+        //当鼠标下压的时候isMousdown变为true
         isMousdown = true;
         var e = e || window.event;
+        //e.clientX是获取的关于浏览器可视窗口的鼠标点坐标
+        //求关于灰色区域的鼠标点位置,就需要减去灰色区域的offsetLeft以及offsetTop
         var x = e.clientX - canvas.offsetLeft;
         var y = e.clientY - canvas.offsetTop;
+        //offset...是相对于父元素的边距,这里canvas的父元素是body
         context.moveTo(x, y);
         context.arc(x, y, 10, 0, 2 * Math.PI, false);
         context.fill();
@@ -59,6 +65,7 @@
             context.moveTo(x, y);
             context.arc(x, y, 10, 0, 2 * Math.PI, false);
             context.fill();
+            console.log(canvas.offsetLeft);
             var image = context.getImageData(0, 0, canvas.width, canvas.height);
             var count = 0;
             for (var i = 0; i < image.data.length; i += 4) {
@@ -72,6 +79,7 @@
             }
         }
         canvas.onmouseup = function (e) {
+            //当鼠标抬起的时候isMousedown变为false
             isMousdown = false;
         }
     }
