@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16</title>
+</head>
+<style>
+    ul {
+        top:50px;
+        width: 100%;
+        height: 250px;
+        position: absolute;
+    }
+    a{
+        text-decoration: none;
+        text-align: center;
+    }
+    li {
+        width: 180px;
+        height: 130px;
+        margin-left: 50px;
+        background-color: white;
+        display:inline-block;
+        /* transition: -webkit-transform .15s linear;
+        transform: rotate(-20deg); */
+    }
+    li:nth-of-type(1){
+        transition: -webkit-transform .15s linear;
+        transform: rotate(-10deg);
+    }
+    li:nth-of-type(2){
+        transition: -webkit-transform .15s linear;
+        transform: rotate(5deg);
+    }
+    li:nth-of-type(3){
+        transition: -webkit-transform .15s linear;
+        transform: rotate(10deg);
+    }
+    li:nth-of-type(4){
+        transition: -webkit-transform .15s linear;
+        transform: rotate(-5deg);
+    }
+    li:nth-of-type(5){
+        transition: -webkit-transform .15s linear;
+        transform: rotate(12deg);
+    }
+    li:nth-of-type(6){
+        transition: -webkit-transform .15s linear;
+        transform: rotate(-8deg);
+    }
+    img {
+        width: 130px;
+        height: 100px;
+        margin-top: 10px;
+        /* float: left; */
+        margin-left: 10px;
+    }
+
+    #box1 img {
+        width: 160px;
+        height: 100px;
+        float: left;
+        /* text-align: center; */
+        border: none;
+    }
+
+    #bigbox {
+        width: 100%;
+        height: 100%;
+    }
+
+    div img {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    #box2 {
+        width: 150px;
+        height: 135px;
+        background-color: white;
+    }
+    ul.photo a:after{
+        content:attr(title);
+        margin-left:60px;
+        color:black;
+    }
+    ul li:nth-child(even):hover{
+        transform: rotate(0deg) scale(1.4);
+    }
+    ul li:nth-child(odd):hover{
+        transform: rotate(0deg) scale(1.4);
+    }
+</style>
+
+<body>
+    <div>
+        <img src="images/bg3.JPG">
+    </div>
+    <ul class="photo">
+        <li id="box1"><a href="1" title="相识"><img src="images/11.jpg" alt="相识"></a></li>
+        <li id="box2"><a href="2" title="凝视"><img src="images/22.JPG" alt="凝视"></a></li>
+        <li id="box1"><a href="3" title="甜睡"><img src="images/33.JPG" alt="甜睡"></a></li>
+        <li id="box2"><a href="4" title="逗乐"><img src="images/44.JPG" alt="逗乐"></a></li>
+        <li id="box2"><a href="5" title="奔跑"><img src="images/55.JPG" alt="奔跑"></a></li>
+        <li id="box2"><a href="6" title="漠视"><img src="images/66.JPG" alt="漠视"></a></li>
+    </ul>
+</body>
+
+</html>
