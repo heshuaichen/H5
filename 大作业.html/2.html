@@ -12,7 +12,7 @@
 .box1{
     width:100%;
     height:30px;
-    background: #333333 url(images/tell.png) no-repeat 810px center;
+    background: #333333 url(images/tell.png) no-repeat 800px center;
     text-align: center;
 }
 .box2{
@@ -37,13 +37,13 @@
   margin-left:100px;
   margin-top:5px;
 }
-.box4{
+#box4{
   display: inline-block;
-  /* width:300px; */
+  width:500px;
   height:40px;
   margin-left:100px;
 }
-.box4 li{
+.box5{
   display: inline-block;
   width:60px;
   height:45px;
@@ -53,9 +53,49 @@
   font-weight:bold;
   margin-top:5px;
 }
-.box4 li:hover{
+#box4 li:hover{
   color:orange;
   border-bottom: 3px orange solid;
+}
+.box6{
+  width:1170px;
+  height:300px;
+}
+.box6 img{
+  width:1140px;
+  height:350px;
+  position:relative;
+  z-index:-1;
+}
+.box6 h2{
+  color:#dcdcdc;
+  position: absolute;
+  top:120px;
+  left:250px;
+}
+.box7{
+  color:#dcdcdc;
+  position: absolute;
+  top:210px;
+  left:250px;
+}
+.box8{
+  color:#dcdcdc;
+  position: absolute;
+  top:250px;
+  left:250px;
+}
+.box9{
+  color:grey;
+  position: absolute;
+  top:180px;
+  left:250px;
+}
+.box10{
+  color:grey;
+  position: absolute;
+  top:270px;
+  left:250px;
 }
 </style>
 <body>
@@ -79,14 +119,23 @@
               <img src="images/logo.png" class="box3">
             </div>
             <div class="collapse navbar-collapse" id="col-1">
-              <ul class="box4">
-                <li>首页</li>
-                <li>热门路线</li>
-                <li>签证推荐</li>
-                <li>使命愿景</li>
+              <ul class="nav navbar-nav" id="box4">
+                <li class="box5">首页</li>
+                <li class="box5">热门路线</li>
+                <li class="box5">签证推荐</li>
+                <li class="box5">使命愿景</li>
               </ul>
             </div>
-          </nav>   
+          </nav>  
+          <div class="box6">
+            <img src="images/banner.jpg">
+            <h2>悠游古欧洲&nbsp&nbsp&nbsp&nbsp 遍览德法瑞意</h2>
+            <p class="box9">________________________________</p>
+            <h4 class="box7">巴黎卢浮宫、塞纳河游船、凡尔赛宫</h4>
+            <p></p>
+            <h4 class="box8">少女峰、大运河、金色列车、西庸城堡</h4>
+            <p class="box10">_______________________________________________</p>
+          </div> 
     </div>
 </body>
 </html>
