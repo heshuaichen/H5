@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <title>大作业测试版</title>
+</head>
+<style>
+  * {
+    list-style: none;
+  }
+
+  .box1 {
+    width: 100%;
+    height: 30px;
+    background: #333333 url(images/tell.png) no-repeat 800px center;
+    text-align: center;
+  }
+
+  .box2 {
+    padding-right: 100px;
+    /* text-align:center; */
+    float: right;
+    line-height: 30px;
+  }
+
+  .box2 li {
+    color: white;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .box2 a {
+    color: gray;
+    font-size: 10px;
+    text-decoration: none;
+  }
+
+  .box3 {
+    width: 100px;
+    height: 40px;
+    margin-left: 100px;
+    margin-top: 5px;
+  }
+
+  #box4 {
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+    margin-left: 100px;
+  }
+
+  .box5 {
+    display: inline-block;
+    width: 60px;
+    height: 45px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 55px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+  #box4 li:hover {
+    color: orange;
+    border-bottom: 3px orange solid;
+  }
+
+  .box6 {
+    /* width: 1170px; */
+    height: 350px;
+    background:url(images/banner.jpg) no-repeat;
+    margin-top:-20px;
+  }
+  .box6 h2 {
+    color: #dcdcdc;
+    position: absolute;
+    top: 120px;
+    left: 250px;
+  }
+
+  .box7 {
+    color: #dcdcdc;
+    position: absolute;
+    top: 210px;
+    left: 250px;
+  }
+
+  .box8 {
+    color: #dcdcdc;
+    position: absolute;
+    top: 250px;
+    left: 250px;
+  }
+
+  .box9 {
+    color: grey;
+    position: absolute;
+    top: 180px;
+    left: 250px;
+  }
+
+  .box10 {
+    color: grey;
+    position: absolute;
+    top: 270px;
+    left: 250px;
+  }
+
+  .box11 {
+    width: 600px;
+    height: 40px;
+    margin-left: 280px;
+    border: 2px #160b10 solid;
+    border-radius: 10px;
+    position: absolute;
+    top: 350px;
+  }
+
+  .box12 {
+    width: 380px;
+    height: 40px;
+    /* margin-left:70px; */
+    float: left;
+  }
+
+  .box11 i {
+    height: 40px;
+    width: 60px;
+    background: #cb5405 url(images/search.png) no-repeat center;
+    float: left;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .box11 ul {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 156px;
+    height: 40px;
+    background-color: #d3d3d8;
+    float: left;
+  }
+
+  .box11 li {
+    display: inline-block;
+    line-height: 40px;
+    /* margin-left:20px; */
+    width: 50px;
+  }
+
+  .box13 {
+    margin-top: 8px;
+    background: url(images/position.png) no-repeat;
+    height: 20px;
+    width: 20px;
+    float: left;
+  }
+
+</style>
+
+<body>
+  <div class="container">
+    <div class="box1">
+      <ul class="box2">
+        <li>400-808-8682</li>
+        <li>&nbsp&nbsp</li>
+        <li>&nbsp&nbsp</li>
+        <li>&nbsp&nbsp<a href="#">请登录</a>&nbsp&nbsp|&nbsp&nbsp <a href="#">注册</a></li>
+      </ul>
+    </div>
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#col-1">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="images/logo.png" class="box3">
+      </div>
+      <div class="collapse navbar-collapse" id="col-1">
+        <ul class="nav navbar-nav" id="box4">
+          <li class="box5">首页</li>
+          <li class="box5">热门路线</li>
+          <li class="box5">签证推荐</li>
+          <li class="box5">使命愿景</li>
+        </ul>
+      </div>
+    </nav>
+    <div class="box6">
+      <!-- <img src="images/banner.jpg"> -->
+      <h2>悠游古欧洲&nbsp&nbsp&nbsp&nbsp 遍览德法瑞意</h2>
+      <p class="box9">________________________________</p>
+      <h4 class="box7">巴黎卢浮宫、塞纳河游船、凡尔赛宫</h4>
+      <p></p>
+      <h4 class="box8">少女峰、大运河、金色列车、西庸城堡</h4>
+      <p class="box10">_______________________________________________</p>
+      <div class="box11">
+        <ul>
+          <li class="box13"></li>
+          <li>目的地</li>
+        </ul>
+        <input class="box12" type="text" name="sousuo" placeholder="      | 日本  美国  英国  地中海">
+        <i style="float:right;" class="icon"></i>
+      </div>
+    </div>
+    <!-- <div class="box14">
+      <div class="box15">
+        <div class="box16">
+          <img src="images/Sbanner2.jpg">
+        </div>
+        <div class="box17">
+          <ul>
+            <li>
+              <div class="box19">
+                <img src="images/car.png">
+              </div>
+            </li>
+            <li class="box20">车辆接送</li>
+            <li>
+              <div class="box18">查看详情</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="box21">
+        <ul>
+          <li class="box22">热门路线</li>
+          <li>Popular tourist routes</li>
+        </ul>
+      </div>
+      <div class="row" id="box23">
+        <div class="col-md-6" style="height:610px;">
+          <div class="box24">
+            <img src="images/hot1.jpg">
+            <div>
+              <li>海南三亚5天4晚，纯玩、4晚红树林度假王国</li>
+              <li>￥2580/人起</li>
+            </div>
+          </div>
+          <div class="box25">
+            <img src="images/hot2.jpg">
+            <div>
+              <li>德法瑞意欧洲四国，ABCD任意路线任您挑选</li>
+              <li>￥7999/人起</li>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="box26">
+            <img src="images/hot3.jpg">
+            <div>
+              <li>曼谷+芭提雅 国际五星，赠送2220大礼包，绝无自费</li>
+              <li>￥2799/人起</li>
+            </div>
+          </div>
+          <div class="box27">
+            <img src="images/hot4.jpg">
+            <div>
+              <li>日本本洲游 樱花、寿司、温泉、美食</li>
+              <li>￥5399/人起</li>
+            </div>
+          </div>
+          <div class="box28">
+            <img src="images/hot5.jpg">
+            <div>
+              <li>斯里兰卡7天6晚全景游 保证入睡2晚香格里拉</li>
+              <li>￥7999/人起</li>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box29">
+        <ul>
+          <li class="box30">使命与愿景</li>
+          <li>让旅游回归本质，体验纯粹旅游</li>
+        </ul>
+      </div>
+      <div class="row" id="box31">
+        <div class="col-md-5">
+          <img src="images/mission1.jpg">
+        </div>
+        <div class="col-md-7" id="box32">
+          <h3>服务理念及优势</h3>
+          <p>“英华逸游”通过重新打造旅游全过程中的产品设计、出行交通方案、陪游向导服务、增值关怀项目等，为客户提供高质量的旅游体验。英华逸游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务
+          </p>
+        </div>
+      </div>
+      <div class="row" id="box33">
+        <div class="col-md-12">
+          <img src="images/mission2.jpg">
+        </div>
+      </div>
+      <div class="box34">
+        <ul>
+          <li>
+            <div class="box35">
+              <img src="images/icon1.png" class="box36">
+              <p>品质行程</p>
+            </div>
+            <p class="box37">旅游达人精心设计、基于口碑反复打磨，全网最好，敢跟任何产品比</p>
+          </li>
+          <li>
+            <div class="box38">
+              <img src="images/icon2.png" class="box39">
+              <p>品质消费</p>
+            </div>
+            <p class="box40">不准自费，<br />不进垃圾购物店和伪景点</p>
+          </li>
+          <li>
+            <div class="box41">
+              <img src="images/icon3.png" class="box42">
+              <p>品质小团</p>
+            </div>
+            <p class="box43">独立成团不散拼，<br />只跟亲朋好友一起玩，每天发图</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="box44"> 
+      <ul class="box45">
+        <li style="font-size:20px;">合作伙伴</li>
+        <li><img src="images/xiecheng.png"><span>携程网</span></li>
+        <li><img src="images/feizhu.png"><span>阿里飞猪</span></li>
+        <li><img src="images/quna.png"><span>去哪儿</span></li>
+        <li><img src="images/suzhou.png"><span>苏州旅游局</span></li>
+      </ul>
+      <div class="box46">
+        <ul class="box47">
+          <li style="height:50px;width: 80px;"><span class="box48">热门位置</span></li>
+          <li style="margin-left:40px;">韩国</li>
+          <li>日本</li>
+          <li>菲律宾</li>
+          <li>越南</li>
+          <li>老挝</li>
+          <li>柬埔寨</li>
+          <li>泰国</li>
+          <li>马来西亚</li>
+          <li>新加坡</li>
+          <li>印度尼西亚</li>
+          <li>印度</li>
+          <li>斯里兰卡</li>
+          <li>土耳其</li>
+          <li>阿联酋</li>
+          <li>西班牙</li>
+          <li>意大利</li>
+          <li>希腊</li>
+          <li>法国</li>
+          <li>比利时</li>
+          <li>荷兰</li>
+          <li style="margin-left: 40px;">英国</li>
+          <li>瑞士</li>
+          <li>奥地利</li>
+          <li>德国</li>
+          <li>匈牙利</li>
+          <li>俄罗斯</li>
+          <li>捷克</li>
+          <li>芬兰</li>
+          <li>葡萄牙</li>
+          <li>冰岛</li>
+          <li>美国</li>
+          <li>加拿大</li>
+          <li>巴西</li>
+          <li>阿根廷</li>
+          <li>澳大利亚</li>
+          <li>新西兰</li>
+        </ul>
+      </div>
+      <div class="box49">
+        <ul class="box50">
+          <li><span class="box51">主题服务</span></li>
+          <li style="margin-left:40px;">海岛度假</li>
+          <li>历史文化</li>
+          <li>探索冒险</li>
+          <li>美食购物</li>
+          <li>都市生活</li>
+          <li>海外游学</li>
+          <li>游轮度假</li>
+          <li>蜜月摄影</li>
+          <li>亲自乐园</li>
+        </ul>
+      </div>
+      <div class="box52">
+        <ul class="box53">
+          <li><span class="box54">友情链接</span></li>
+          <li style="margin-left:40px;">马蜂窝</li>
+          <li>穷游</li>
+          <li>booking</li>
+          <li>苏州旅游局</li>
+          <li>旅游网</li>
+          <li>吾爱全球签证中心</li>
+          <li>酒店团购</li>
+          <li>携程旅游工业</li>
+          <li>天巡职航在线</li>
+          <li>满天飞旅游网</li>
+          <li>中国旅游网</li>
+          <li>奥乐网</li>
+          <li>背包免旅游行程</li>
+          <li style="margin-left:40px;">出境旅游</li>
+          <li>国际酒店</li>
+          <li>广州旅行社</li>
+          <li>出境旅游</li>
+          <li>517旅行</li>
+          <li>花生游</li>
+          <li>家园网</li>
+          <li>海外婚礼</li>
+        </ul>
+      </div>
+      <div class="box55">
+        <p>2020  @苏州英华国际旅游有限公司 版权所有</p>
+      </div>
+    </div> -->
+  </div>
+</body>
+
+</html>

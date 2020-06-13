@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大作业</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul,
+    li {
+        list-style: none;
+    }
+
+    @media screen and (min-width:800px) {
+        .box1 {
+            width: 100%;
+            height: 30px;
+            background-color: black;
+            text-align: center;
+        }
+
+        .box2 {
+            padding-right: 100px;
+            float: right;
+            line-height: 30px;
+        }
+
+        .box2 li {
+            color: white;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .box2 a {
+            color: gray;
+            font-size: 10px;
+            text-decoration: none;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 40px;
+            margin-left: 100px;
+            margin-top: 5px;
+        }
+
+        #box4 {
+            display: inline-block;
+            width: 500px;
+            height: 40px;
+            margin-left: 100px;
+        }
+
+        .box5 {
+            display: inline-block;
+            width: 60px;
+            height: 45px;
+            text-align: center;
+            line-height: 40px;
+            margin-left: 55px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        #box4 li:hover {
+            color: orange;
+            border-bottom: 3px orange solid;
+        }
+
+        .dingzhi{
+            display:none;
+        }
+        .box6 {
+            height: 350px;
+            background:url(images/banner.jpg) no-repeat;
+            margin-top:-20px;
+        }
+
+        .box6 h2 {
+            color: #dcdcdc;
+            position: absolute;
+            top: 120px;
+            left: 250px;
+        }
+
+        .box7 {
+            color: #dcdcdc;
+            position: absolute;
+            top: 210px;
+            left: 250px;
+        }
+        .box8 {
+            color: #dcdcdc;
+            position: absolute;
+            top: 250px;
+            left: 250px;
+        }
+        .box9 {
+            color: grey;
+            position: absolute;
+            top: 180px;
+            left: 250px;
+        }
+        .box10 {
+            color: grey;
+            position: absolute;
+            top: 270px;
+            left: 250px;
+        }
+
+        .box11 {
+            position: absolute;
+            top: 350px;
+        }
+        .box11 {
+            width: 600px;
+            height: 40px;
+            margin-left: 280px;
+            border: 2px #160b10 solid;
+            border-radius: 10px;
+        }
+        .box12 {
+            width: 380px;
+            height: 40px;
+            float: left;
+        }
+        .box11 i {
+            height: 40px;
+            width: 60px;
+            background: #cb5405 url(images/search.png) no-repeat center;
+            float: left;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .box11 ul {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            width: 156px;
+            height: 40px;
+            background-color: #d3d3d8;
+            float: left;
+        }
+        .box11 li {
+            display: inline-block;
+            line-height: 40px;
+            width: 50px;
+        }
+        .box13 {
+            margin-top: 8px;
+            margin-left:18px ;
+            background: url(images/position.png) no-repeat;
+            height: 20px;
+            width: 20px;
+            float: left;
+        }
+
+        .box14 {
+            background-color: #dddddd;
+            height: 2160px;
+        }
+
+        .box15 {
+            position: relative;
+            top: 20px;
+            margin: 0 auto;
+            width: 900px;
+            height: 270px;
+        }
+        .box16 {
+            width: 700px;
+            float: left;
+        }
+        .box16 img {
+            width: 700px;
+            height: 250px;
+        }
+        .box17 {
+            width: 200px;
+            background-color: #14316d;
+            height: 250px;
+            float: left;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .box17 li {
+            color: white;
+            width: 200px;
+        }
+        .box19 {
+            margin-top: 30px;
+            margin-left: 40px;
+        }
+        .box18 {
+            height: 40px;
+            width: 140px;
+            border: 1px white solid;
+            line-height: 40px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 10px;
+            margin-left:30px;
+        }
+        .box20 {
+            margin-left: 55px;
+            margin-top: 10px;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+        .box21 {
+            width: 900px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        .box21 ul {
+            height: 80px;
+            width: 900px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .box22 {
+            font-size: 22px;
+            letter-spacing: 20px;
+            margin-left: 15px;
+        }
+
+        #box23 {
+            width: 900px;
+            height: 720px;
+            margin: 0 auto;
+        }
+
+        .box24 {
+            width: 450px;
+            height: 318px;
+            float: left;
+            margin-bottom: 45px;
+        }
+        .box24 img {
+            height: 313px;
+            width: 448px;
+        }
+
+        .box24 div {
+            width: 448px;
+            height: 50px;
+            background-color: #000000;
+            position: relative;
+            color: white;
+        }
+
+        .box24 li {
+            margin-left: 40px;
+        }
+
+        .box25 {
+            width: 450px;
+            height: 318px;
+            float: left;
+        }
+
+        .box25 img {
+            height: 313px;
+            width: 448px;
+            /* float: left; */
+        }
+
+        .box25 div {
+            width: 448px;
+            height: 50px;
+            background-color: #000000;
+            position: relative;
+            color: white;
+        }
+
+        .box25 li {
+            margin-left: 40px;
+            line-height: 20px;
+        }
+
+        .box26 {
+            width: 450px;
+            height: 203px;
+            margin-bottom: 40px;
+        }
+
+        .box26 img {
+            height: 200px;
+            width: 448px;
+        }
+
+        .box26 div {
+            width: 448px;
+            height: 40px;
+            background-color: #154255;
+            position: relative;
+        }
+
+        .box26 li {
+            color: white;
+            margin-left: 40px;
+        }
+
+        .box27 {
+            width: 450px;
+            height: 203px;
+            margin-bottom: 40px;
+        }
+
+        .box27 img {
+            height: 200px;
+            width: 448px;
+        }
+
+        .box27 div {
+            width: 448px;
+            height: 40px;
+            background-color: #797165;
+            position: relative;
+        }
+
+        .box27 li {
+            color: white;
+            margin-left: 40px;
+        }
+
+        .box28 {
+            width: 450px;
+            height: 203px;
+        }
+
+        .box28 img {
+            height: 200px;
+            width: 448px;
+        }
+
+        .box28 div {
+            width: 448px;
+            height: 40px;
+            background-color: #02060c;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .box28 li {
+            color: white;
+            margin-left: 40px;
+        }
+
+        .box29 {
+            width: 900px;
+            height: 80px;
+            margin: 0 auto;
+        }
+
+        .box29 ul {
+            height: 80px;
+            width: 900px;
+            margin-top: 20px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .box30 {
+            font-size: 30px;
+        }
+
+        #box31 {
+            height: 200px;
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        #box31 img {
+            height: 200px;
+            width: 375px;
+        }
+
+        #box32 {
+            background-color: #1c5080;
+            opacity: 0.8;
+            height: 200px;
+        }
+
+        #box32 h3 {
+            color: white;
+            top: 20px;
+            /* left:50px; */
+            text-align: center;
+            position: relative;
+        }
+
+        #box32 p {
+            color: white;
+            width: 450px;
+            top: 20px;
+            left: 30px;
+            line-height: 30px;
+            text-align: center;
+            position: relative;
+            float: left;
+        }
+
+        #box33 {
+            width: 900px;
+            height: 360px;
+            margin: 0 auto;
+        }
+
+        #box33 img {
+            margin-top: 5px;
+            height: 362px;
+            width: 900px;
+        }
+
+        .box34 {
+            width: 900px;
+            height: 400px;
+            /* margin: 0 auto; */
+            margin-left:135px;
+            background-color: #1c5080;
+            border-radius: 5px;
+        }
+
+        .box34 ul {
+            width: 900px;
+        }
+
+        .box34 li {
+            width: 240px;
+            float: left;
+        }
+
+        .box35 {
+            margin-left: 70px;
+            margin-top: 10px;
+            background: url(images/rorate.png) no-repeat 20px;
+            width: 240px;
+            height: 200px;
+            background-size: 80% 80%;
+            position: relative;
+            top: 50px;
+        }
+
+        .box36 {
+            width: 60px;
+            height: 60px;
+            margin-top: 50px;
+            /* position: relative; */
+            margin-left: 85px;
+        }
+
+        .box35 p {
+            color: white;
+            margin-left: 70px;
+            font-size: 22px;
+        }
+
+        .box37 {
+            color: white;
+            margin-top: 60px;
+            margin-left: 60px;
+            font-size: 13px;
+            width: 240px;
+            height: 100px;
+            text-align: center;
+        }
+
+        .box38 {
+            margin-left: 70px;
+            margin-top: 10px;
+            background: url(images/rorate.png) no-repeat 20px;
+            width: 240px;
+            height: 200px;
+            background-size: 80% 80%;
+            position: relative;
+            top: 50px;
+        }
+
+        .box39 {
+            width: 60px;
+            height: 60px;
+            margin-top: 50px;
+            /* position: relative; */
+            margin-left: 85px;
+        }
+
+        .box38 p {
+            color: white;
+            margin-left: 70px;
+            font-size: 22px;
+        }
+
+        .box40 {
+            color: white;
+            margin-top: 60px;
+            margin-left: 60px;
+            font-size: 13px;
+            width: 240px;
+            height: 100px;
+            text-align: center;
+        }
+
+        .box41 {
+            margin-left: 70px;
+            margin-top: 10px;
+            background: url(images/rorate.png) no-repeat 20px;
+            width: 240px;
+            height: 200px;
+            background-size: 80% 80%;
+            position: relative;
+            top: 50px;
+        }
+
+        .box42 {
+            width: 60px;
+            height: 60px;
+            margin-top: 50px;
+            /* position: relative; */
+            margin-left: 85px;
+        }
+
+        .box41 p {
+            color: white;
+            margin-left: 70px;
+            font-size: 22px;
+        }
+
+        .box43 {
+            color: white;
+            margin-top: 60px;
+            margin-left: 60px;
+            font-size: 13px;
+            width: 240px;
+            height: 100px;
+            text-align: center;
+        }
+
+        .box44 {
+            background-color: #000000;
+            height: 500px;
+            color: white;
+        }
+
+        .box45 {
+            width: 700px;
+            margin-left: 115px;
+            height: 120px;
+            display: inline-block;
+        }
+
+        .box45 li {
+            width: 90px;
+            height: 120px;
+            margin-left: 30px;
+            /* display: inline-block; */
+            float: left;
+            margin-top: 40px;
+        }
+
+        .box45 li span {
+            display: block;
+            width: 100%;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .box46 {
+            width: 900px;
+            height: 60px;
+            margin-left: 135px;
+        }
+
+        .box47 {
+            width: 950px;
+            height: 60px;
+        }
+
+        .box47 li {
+            /* width:px; */
+            height: 20px;
+            margin-left: 9px;
+            float: left;
+            font-size: 11px;
+            color: #dddddd;
+        }
+
+        .box48 {
+            font-size: 20px;
+            width: 100px;
+            height: 100px;
+            color: white;
+        }
+
+        .box49 {
+            width: 900px;
+            height: 80px;
+            margin-left: 125px;
+        }
+
+        .box50 {
+            width: 950px;
+            height: 150px;
+        }
+
+        .box50 li {
+            color: #dddddd;
+            float: left;
+            line-height: 30px;
+            margin-left: 20px;
+        }
+
+        .box51 {
+            font-size: 20px;
+            width: 100px;
+            height: 100px;
+            color: white;
+        }
+
+        .box52 {
+            width: 900px;
+            height: 100px;
+            margin-left: 135px;
+        }
+
+        .box53 {
+            width: 950px;
+            height: 100px;
+        }
+
+        .box53 li {
+            color: #dddddd;
+            float: left;
+            font-size: 10px;
+            line-height: 20px;
+            margin-left: 10px;
+        }
+
+        .box54 {
+            font-size: 20px;
+            width: 100px;
+            height: 100px;
+            color: white;
+        }
+
+        .box55 {
+            width: 100%;
+            height: 200px;
+            margin: 0 auto;
+            border-top: 1px solid #dddddd;
+        }
+
+        .box55 p {
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+        .search1{
+            display:none;
+        }
+        .hainan{
+            display:none;
+        }
+        .souche{
+            display:none;
+        }
+        .defa{
+            display:none;
+        }
+        .ren{
+            display:none;
+        }
+        .dian{
+            display:none;
+        }
+        .chakan{
+            display:none;
+        }
+        .fuwu{
+            display:none;
+        }
+        .dilan{
+            display:none;
+        }
+        .linian1{
+            display:none;
+        }
+    }
+    @media screen and (max-width:799px){
+        .box1{
+            display:none;
+        }
+        .dingzhi{
+            float: right;
+            margin-top: 10px;
+            margin-right: 30px;
+        }
+        .box6{
+            height: 250px;
+            background:url(images/banner.jpg) no-repeat;
+            background-size: 100% 100%;
+            -moz-background-size: 100% 100%;
+            -webkit-background-size: 100% 100%;
+            -o-background-size: 100% 100%;
+            margin-top:-20px;
+        }
+        .box6 h3{
+            color:white;
+            position:relative;
+            top:40px;
+            margin-left:30px;
+        }
+        .box6 p{
+            color:white;
+            position: relative;
+            top:60px;
+            margin-left:30px;
+        }
+        .box11 {
+            width: 320px;
+            height: 30px;
+            margin-left:100px;
+            border-radius: 10px;
+            margin-top:120px;
+        }
+        .box12 {
+            width: 200px;
+            height: 36px;
+            float: left;
+            border:2px #160b10 solid;
+            border-left:none;
+            border-right:none;
+        }
+
+        .box11 i {
+            border: 2px #160b10 solid;
+            border-left:none;
+            height: 36px;
+            width: 42px;
+            background: #cb5405 url(images/search.png) no-repeat center;
+            float: left;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .box11 ul {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            width: 78px;
+            height: 36px;
+            background-color: #d3d3d8;
+            float: left;
+            border: 2px #160b10 solid;
+            border-right:none;
+        }
+        .box11 li {
+            display: inline-block;
+            line-height: 30px;
+            width: 30px;
+            font-size:10px;
+        }
+        .box13 {
+            margin-top: 12px;
+            margin-left:10px;
+            background: url(images/position.png) no-repeat;
+            background-size:60% 60%;
+            height: 15px;
+            width: 10px;
+            float: left;
+        }
+        .box14 {
+            /* background-color: #dddddd; */
+            height: 2160px;
+        }
+        .btn{
+            background-color: #e8420a;
+            color:white;
+        }
+        .search{
+            display:none;
+        }
+        .box15{
+            display:none;
+        }
+        .souche{
+            margin-top:20px;
+            background-color:white;
+            height:180px;
+        }
+        .souche img{
+            float: left;
+            margin-top:35px;
+        }
+
+        .souche a{
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: #b5b5b5;
+            border: 1px solid#b5b5b5;
+            border-radius: 5px;
+            /* display: inline-block; */
+            float: right;
+            margin-top: -40px;
+        }
+        .souche li{
+            float: left;
+            margin-left: 20px;
+        }
+        .luxian{
+            display:none;
+        }
+        .box22{
+            margin-top:25px;
+            background-color:white;
+            font-size:25px;
+            letter-spacing:10px;
+            height:40px;
+            width:100%;
+            margin-bottom:-10px;
+            border-left:4px #e8420a solid;
+        }
+        .box22 span{
+            width: 100%;
+            height:40px;
+            border-bottom:1px #b5b5b5 solid;
+            margin-left:10px;
+        }
+        .box45{
+            display:none;
+        }
+        .box47{
+            display:none;
+        }
+        .box49{
+            display:none;
+        }
+        .box52{
+            display:none;
+        }
+        #jingdian{
+            display:none;
+        }
+        .box24 {
+            width:100%;
+            height: 318px;
+            float: left;
+            margin-bottom: 45px;
+        }
+        .box24 img {
+            height: 313px;
+            width:100%;
+        }
+        .box24 div {
+            width:100%;
+            height: 50px;
+            background-color: #000000;
+            position: relative;
+            color: white;
+        }
+        .box24 li {
+            margin-left: 40px;
+        }
+        .box25 {
+            width:100%;
+            height: 318px;
+            float: left;
+            margin-top:20px;
+            margin-bottom:100px;
+        }
+        .box25 img {
+            height: 313px;
+            width:100%;
+        }
+        .box25 div {
+            width:100%;
+            height: 50px;
+            background-color: #000000;
+            position: relative;
+            color: white;
+        }
+        .box25 li {
+            margin-left: 40px;
+            line-height: 25px;
+        }
+        .hainan{
+            width:200px;
+        }
+        .jiage1{
+            float:right;
+            margin-top:-25px;
+            margin-right:15px;
+        }
+        .hainan2{
+            display:none;
+        }
+        .defa2{
+            display:none;
+        }
+        .jiage2{
+            float:right;
+            margin-top:-35px;
+            margin-right:15px;
+        }
+        .qian{
+            font-size:20px;
+        }
+        .ren{
+            font-size:10px;
+        }
+        .box29 {
+            width: 900px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        .box29 ul {
+            height: 50px;
+            width: 900px;
+            margin-top: 20px;
+            line-height: 40px;
+            border-left:4px #e8420a solid;
+        }
+        .box29 li{
+            display: inline-block;
+            margin-left:20px;
+        }
+        .box30 {
+            font-size: 30px;
+        }
+        .chakan1{
+            width:200px;
+            margin-left:150px;
+            text-align:center;
+        }
+        .chakan{
+            color:grey;
+            margin-left:20px;
+            width:200px;
+            height:50px;
+            border: 1px grey solid;
+            line-height:50px;
+            border-radius:10px;
+            font-size:20px;
+        }
+        #box31 img{
+            width:100%;
+        }
+        #box32 {
+            width:100%;
+            height: 200px;
+        }
+        #box32 h3 {
+            top: 20px;
+            text-align: center;
+            position: relative;
+        }
+        #box32 p {
+            width:100%;
+            top: 20px;
+            font-size:15px;
+            line-height: 30px;
+            text-align: center;
+            position: relative;
+            float: left;
+        }
+        #box33 {
+            width:100%;
+            height:220px;
+        }
+        #box33 img {
+            /* width:100%; */
+            width:465px;
+            height:100%;
+        }
+        .box34{
+            display:none;
+        }
+        .fuwu{
+            width:100%;
+            height:500px;
+        }
+        .fuwu1{
+            width:100%;
+            height:100px;
+            border-bottom:1px grey solid;
+        }
+        .fuwu span{
+            font-size:20px;
+        }
+        .fuwu p{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .fuwu li{
+            float: left;
+            margin-left:70px;
+        }
+        .fuwu2{
+            width:100%;
+            height:90px;
+            margin-top: 20px;
+            border-bottom:1px grey solid;
+        }
+        .zifei{
+            left:10px;
+            top:10px;
+            position: relative;
+        }
+        .fuwu3{
+            width:100%;
+            height:90px;
+            margin-top: 20px;
+            border-bottom:1px grey solid;
+        }
+        .zifei1{
+            left:10px;
+            top:10px;
+            position: relative;
+        }
+        .dilan{
+            /* width:100%; */
+            width:500px;
+            height:200px;
+            background-color:black;
+            margin-top:200px;
+        }
+        .dilan1{
+            color:white;
+            position: relative;
+            top:50px;
+            text-align:center;
+        }
+        .linian{
+            display:none;
+        }
+        .box55{
+            display:none;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <ul class="box2">
+                <li><img src="images/tell.png"></li>
+                <li>400-808-8682</li>
+                <li>&nbsp&nbsp</li>
+                <li>&nbsp&nbsp</li>
+                <li>&nbsp&nbsp<a href="#">请登录</a>&nbsp&nbsp|&nbsp&nbsp <a href="#">注册</a></li>
+            </ul>
+        </div>
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#col-1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="images/logo.png" class="box3">
+                <div class="dingzhi">
+                    <button type="button" class="btn">快速定制</button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="col-1">
+                <ul class="nav navbar-nav" id="box4">
+                    <li class="box5">首页</li>
+                    <li class="box5">热门路线</li>
+                    <li class="box5">签证推荐</li>
+                    <li class="box5">使命愿景</li>
+                </ul>
+            </div>
+        </nav>
+        <div class="box6">
+            <div class="search">
+                <h2>悠游古欧洲&nbsp&nbsp&nbsp&nbsp 遍览德法瑞意</h2>
+                <p class="box9">________________________________</p>
+                <h4 class="box7">巴黎卢浮宫、塞纳河游船、凡尔赛宫</h4>
+                <p></p>
+                <h4 class="box8">少女峰、大运河、金色列车、西庸城堡</h4>
+                <p class="box10">_______________________________________________</p>
+            </div>
+            <div class="search1">
+                <h3>悠游古欧洲&nbsp&nbsp&nbsp&nbsp 遍览德法瑞意</h3>
+                <p>全程升级热早+1晚5星酒店</p>
+            </div>
+            <div class="box11">
+                <ul>
+                    <li class="box13"></li>
+                    <li>目的地</li>
+                </ul>
+                <input class="box12" type="text" name="sousuo" placeholder="      | 日本  美国  英国  地中海">
+                <i style="float:right;" class="icon"></i>
+            </div>
+        </div>
+        <div class="box14">
+            <!-- 车辆搜索大 -->
+            <div class="box15">
+                <div class="box16">
+                    <img src="images/Sbanner2.jpg">
+                </div>
+                <div class="box17">
+                    <ul>
+                        <li>
+                            <div class="box19">
+                                <img src="images/car.png">
+                            </div>
+                        </li>
+                        <li class="box20">车辆接送</li>
+                        <li>
+                            <div class="box18">查看详情</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 车辆搜索小 -->
+            <div class="souche">
+                <img src="images/carH.png">
+                <ul>
+                    <li style="color: #1c5080;font-size: 20px;margin-top: 45px;">机场接送 省心省力</li>
+                    <li style="color: #666666;line-height: 20px;">提供上海、苏州、无锡各市</li>
+                    <li style="color: #666666;line-height: 20px;">往返机场、码头接送服务，更有包车服务</li>
+                </ul>
+                <a href="#">查看详情</a>
+            </div>
+            <!-- 热门路线 -->
+            <div class="box21">
+                <ul>
+                    <li class="box22"><span>热门路线</span></li>
+                    <li class="luxian">Popular tourist routes</li>
+                </ul>
+            </div>
+            <!-- 景点介绍 -->
+            <div class="row" id="box23">
+                <div class="col-md-6" style="height:610px;">
+                    <div class="box24">
+                        <img src="images/hot1.jpg">
+                        <div>
+                            <li class="hainan2">海南三亚5天4晚，纯玩、4晚红树林度假王国</li>
+                            <li class="hainan">海南三亚5天4晚，<br/>纯玩、4晚红树林度假王国</li>
+                            <li class="jiage1">￥<span class="qian">2580</span><span class="ren">/人起</span></li>
+                        </div>
+                    </div>
+                    <div class="box25">
+                        <img src="images/hot2.jpg">
+                        <div>
+                            <li class="defa2">德法瑞意欧洲四国，ABCD任意路线任您挑选</li>
+                            <li class="defa">德法瑞意欧洲四国，<br/>ABCD任意路线任您挑选</li>
+                            <li class="jiage2">￥<span class="qian">7999</span><span class="ren">/人起</span></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" id="jingdian">
+                    <div class="box26">
+                        <img src="images/hot3.jpg">
+                        <div>
+                            <li>曼谷+芭提雅 国际五星，赠送2220大礼包，绝无自费</li>
+                            <li>￥2799/人起</li>
+                        </div>
+                    </div>
+                    <div class="box27">
+                        <img src="images/hot4.jpg">
+                        <div>
+                            <li>日本本洲游 樱花、寿司、温泉、美食</li>
+                            <li>￥5399/人起</li>
+                        </div>
+                    </div>
+                    <div class="box28">
+                        <img src="images/hot5.jpg">
+                        <div>
+                            <li>斯里兰卡7天6晚全景游 保证入睡2晚香格里拉</li>
+                            <li>￥7999/人起</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 景点查看 -->
+            <div class="chakan1">
+                <p class="chakan">查看更多&nbsp&nbsp&nbsp&nbsp&nbsp></p>
+            </div> 
+            <div class="box29">
+                <ul>
+                    <li class="box30">使命与愿景<span class="dian">:</span></li>
+                    <li>让旅游回归本质，体验纯粹旅游</li>
+                </ul>
+            </div>
+            <!-- 英华逸游 -->
+            <div class="row" id="box31">
+                <div class="col-md-5">
+                    <img src="images/mission1.jpg">
+                </div>
+                <div class="col-md-7" id="box32">
+                    <h3 class="linian">服务理念及优势</h3>
+                    <h3 class="linian1">--服务理念及优势--</h3>
+                    <p>“英华逸游”通过重新打造旅游全过程中的产品设计、出行交通方案、陪游向导服务、增值关怀项目等，为客户提供高质量的旅游体验。英华逸游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。
+                    </p>
+                </div>
+            </div>
+            <!-- 大合照 -->
+            <div class="row" id="box33">
+                <div class="col-md-12">
+                    <img src="images/mission2.jpg">
+                </div>
+            </div>
+            <!-- 服务优势大 -->
+            <div class="box34">
+                <ul>
+                    <li>
+                        <div class="box35">
+                            <img src="images/icon1.png" class="box36">
+                            <p>品质行程</p>
+                        </div>
+                        <p class="box37">旅游达人精心设计、基于口碑反复打磨，全网最好，敢跟任何产品比</p>
+                    </li>
+                    <li>
+                        <div class="box38">
+                            <img src="images/icon2.png" class="box39">
+                            <p>品质消费</p>
+                        </div>
+                        <p class="box40">不准自费，<br />不进垃圾购物店和伪景点</p>
+                    </li>
+                    <li>
+                        <div class="box41">
+                            <img src="images/icon3.png" class="box42">
+                            <p>品质小团</p>
+                        </div>
+                        <p class="box43">独立成团不散拼，<br />只跟亲朋好友一起玩，每天发图</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 服务优势小 -->
+            <div class="fuwu">
+                <p>--<span>服务优势</span>--</p>
+                <ul class="fuwu1">
+                    <li><img src="images/icon11.png"></li>
+                    <li>旅游达人精心设计、基于口碑反复打磨，<br/>告别人山人海鸡肋景点。<br/>全网最好，敢跟任何产品比</li>
+                </ul>
+                <ul class="fuwu2">
+                    <li><img src="images/icon22.png"></li>
+                    <li class="zifei">不准自费，<br/>不进垃圾购物店和伪景点</li>
+                </ul>
+                <ul class="fuwu3">
+                    <li><img src="images/icon33.png"></li>
+                    <li class="zifei1">独立成团不散拼，<br/>只跟亲朋好友一起玩，每天发团</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 底边栏大 -->
+        <div class="box44">
+            <ul class="box45">
+                <li style="font-size:20px;">合作伙伴</li>
+                <li><img src="images/xiecheng.png"><span>携程网</span></li>
+                <li><img src="images/feizhu.png"><span>阿里飞猪</span></li>
+                <li><img src="images/quna.png"><span>去哪儿</span></li>
+                <li><img src="images/suzhou.png"><span>苏州旅游局</span></li>
+            </ul>
+            <div class="box46">
+                <ul class="box47">
+                    <li style="height:50px;width: 80px;"><span class="box48">热门位置</span></li>
+                    <li style="margin-left:40px;">韩国</li>
+                    <li>日本</li>
+                    <li>菲律宾</li>
+                    <li>越南</li>
+                    <li>老挝</li>
+                    <li>柬埔寨</li>
+                    <li>泰国</li>
+                    <li>马来西亚</li>
+                    <li>新加坡</li>
+                    <li>印度尼西亚</li>
+                    <li>印度</li>
+                    <li>斯里兰卡</li>
+                    <li>土耳其</li>
+                    <li>阿联酋</li>
+                    <li>西班牙</li>
+                    <li>意大利</li>
+                    <li>希腊</li>
+                    <li>法国</li>
+                    <li>比利时</li>
+                    <li>荷兰</li>
+                    <li style="margin-left: 40px;">英国</li>
+                    <li>瑞士</li>
+                    <li>奥地利</li>
+                    <li>德国</li>
+                    <li>匈牙利</li>
+                    <li>俄罗斯</li>
+                    <li>捷克</li>
+                    <li>芬兰</li>
+                    <li>葡萄牙</li>
+                    <li>冰岛</li>
+                    <li>美国</li>
+                    <li>加拿大</li>
+                    <li>巴西</li>
+                    <li>阿根廷</li>
+                    <li>澳大利亚</li>
+                    <li>新西兰</li>
+                </ul>
+            </div>
+            <div class="box49">
+                <ul class="box50">
+                    <li><span class="box51">主题服务</span></li>
+                    <li style="margin-left:40px;">海岛度假</li>
+                    <li>历史文化</li>
+                    <li>探索冒险</li>
+                    <li>美食购物</li>
+                    <li>都市生活</li>
+                    <li>海外游学</li>
+                    <li>游轮度假</li>
+                    <li>蜜月摄影</li>
+                    <li>亲自乐园</li>
+                </ul>
+            </div>
+            <div class="box52">
+                <ul class="box53">
+                    <li><span class="box54">友情链接</span></li>
+                    <li style="margin-left:40px;">马蜂窝</li>
+                    <li>穷游</li>
+                    <li>booking</li>
+                    <li>苏州旅游局</li>
+                    <li>旅游网</li>
+                    <li>吾爱全球签证中心</li>
+                    <li>酒店团购</li>
+                    <li>携程旅游工业</li>
+                    <li>天巡职航在线</li>
+                    <li>满天飞旅游网</li>
+                    <li>中国旅游网</li>
+                    <li>奥乐网</li>
+                    <li>背包免旅游行程</li>
+                    <li style="margin-left:40px;">出境旅游</li>
+                    <li>国际酒店</li>
+                    <li>广州旅行社</li>
+                    <li>出境旅游</li>
+                    <li>517旅行</li>
+                    <li>花生游</li>
+                    <li>家园网</li>
+                    <li>海外婚礼</li>
+                </ul>
+            </div>
+            <div class="box55">
+                <p>2020 @苏州英华国际旅游有限公司 版权所有</p>
+            </div>
+            <!-- 底边栏小 -->
+            <div class="dilan">
+                <ul class="dilan1">
+                    <li>苏ICP备号、2020</li>
+                    <li>@苏州英华国际旅游有限公司 版权所有</li>
+                    <li>技术支持 杭州科技</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

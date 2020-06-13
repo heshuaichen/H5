@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .navbar {
+        height: 80px;
+        background-color: #e1e1e1;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .nav1 li {
+        margin-top: 15px;
+        margin-left: 80px;
+        line-height: 80px;
+        display: inline-block;
+    }
+
+    .nav1 li a {
+        color: #000;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .nav1 li:hover {
+        border-bottom: 4px solid #e8420a;
+    }
+
+    .nav1 li a:hover {
+        color: #e8420a;
+    }
+    .dingzhi {
+        display: none;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#col-1" style="border:none">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo"></a>
+            <div class="dingzhi">
+                <button type="button" class="btn ">快速定制</button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="col-1">
+            <ul class="nav navbar-nav nav1">
+                <li><a href="#" style="text-decoration: none;">首页</a></li>
+                <li><a href="#" style="text-decoration: none; ">热门路线</a></li>
+                <li><a href="#" style="text-decoration: none; ">签证推荐</a></li>
+                <li><a href="#" style="text-decoration: none; ">使命愿景</a></li>
+            </ul>
+        </div>
+</body>
+
+</html>
