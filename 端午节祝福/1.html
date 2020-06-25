@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .stage{
+        width:300px;
+        height:300px;
+        margin:100px auto;
+        position: relative;
+        -webkit-perspective:350px;
+        top:300px;
+    }
+    .container{
+        transform-style:preserve-3d;
+    }
+    .side{
+        background:rgba(255, 0, 0, 0.3);
+        border:1px solid red;
+        font-size:40px;
+        font-weight:bold;
+        color:#fff;
+        text-align:center;
+        height:196px;
+        width:196px;
+        position:absolute;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0,0.2);
+        text-transform:uppercase;
+    }
+    .front{
+        transform:translateZ(100px);
+    }
+    .back{
+        transform:rotateX(180deg) translateZ(100px);
+    }
+    .left{
+        transform: rotateY(-90deg) translateZ(100px);
+    }
+    .right{
+        transform:rotateY(90deg) translateZ(100px);
+    }
+    .top{
+        transform:rotateX(90deg) translateZ(100px);
+    }
+    .bottom{
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+    @keyframes spin{
+        0% {
+            transform:rotateX(0deg);
+        }
+        100% {
+            transform:rotateX(360deg);
+        }
+    }
+    .container:hover{
+        animation:spin 5s linear infinite;
+    }
+    div img{
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 800px;
+    }
+    .circle{
+        margin-left:50px;
+        margin-top:270px;
+    }
+    li{
+        text-align:center;
+        font-style:italic;
+        color:black;
+        line-height:200px;
+        font-size:80px;
+        display: inline-block;
+        list-style:none;
+        width: 200px;
+        height:200px;
+        border:1px black solid;
+        border-radius:100px;
+        margin-left:70px;
+        text-shadow:4px 4px 4px red;
+    }
+    @keyframes move1{
+        0%{
+            margin-top:0px;
+        }
+        50%{
+            margin-top:-30px;
+        }
+        100%{
+            margin-top:30px;
+        }
+    }
+    .circle1:hover{
+        animation-name:move1;
+        animation-duration:3s;
+        animation-timing-function:linear;
+    }
+</style>
+<body>
+    <div>
+        <img src="images/1.JPG">
+    </div>
+    <div class="stage">
+        <div class="container">
+            <div class="side front">端午快乐一生幸福</div>
+            <div class="side back">粽儿满满人生暖暖</div>
+            <div class="side left">端午安康</div>
+            <div class="side right">端午安康</div>
+            <div class="side top">笑口常开好运相伴</div>
+            <div class="side bottom">粽儿饱饱财源好好</div>
+        </div>
+    </div>
+    <div class="circle">
+        <ul>
+            <li class="circle1">端</li>
+            <li class="circle2">午</li>
+            <li class="circle3">安</li>
+            <li class="circle4">康</li>
+        </ul>
+    </div>
+</body>
+</html>
